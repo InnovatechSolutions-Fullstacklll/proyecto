@@ -20,6 +20,8 @@ public class ProjectService {
 
         Project project = Project.builder()
                 .nombre(request.getNombre())
+                .area(request.getArea())
+                .estado(request.getEstado())
                 .tecnologia(request.getTecnologia())
                 .integrantes(request.getIntegrantes())
                 .build();
@@ -29,6 +31,8 @@ public class ProjectService {
         return ProjectResponse.builder()
                 .id(project.getId())
                 .nombre(project.getNombre())
+                .area(project.getArea())
+                .estado(project.getEstado())
                 .tecnologia(project.getTecnologia())
                 .integrantes(project.getIntegrantes())
                 .build();
